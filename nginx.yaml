@@ -1,28 +1,28 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: my-nginx
+  name: my-nginx3
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
-  namespace: my-nginx
+  name: nginx3
+  namespace: my-nginx3
   labels:
-    name: nginx
+    name: nginx3
 spec:
   replicas: 3
   selector:
     matchLabels:
-      name: nginx
+      name: nginx3
   template:
     metadata:
-      namespace: my-nginx
+      namespace: my-nginx3
       labels:
-        name: nginx
+        name: nginx3
     spec:
       containers:
-      - name: nginx
+      - name: nginx3
         image: nginx
         ports:
         - containerPort: 80
